@@ -7,7 +7,8 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/contact.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,16 +17,22 @@
         <div class=leftandright>
             <div id="left">
                 <form id="form">
-                    <input type="text" placeholder="Name" /><br><br>
-                    <input type="text" placeholder="Email" /><br><br>
-                    <textarea rows="10" cols="50" placeholder="Message"></textarea>
-
+                    <input id="input" type="text" placeholder="Name"/><br><br>
+                    <input id="input" type="text" placeholder="Email"/><br><br>
+                    <textarea rows="10" cols="90" placeholder="Message"></textarea><br><br>
+                    <input type="Submit" value="Submit" id="submit" />
                 </form>
             </div>
 
             <div id="right">
-                <p>If you have some comments or suggestions, please and a message</p>
-
+                <p>Our store and phone number is:</p>
+                <p>
+                      <i class="fa fa-map-marker"></i>
+                     <a href="http://maps.google.com/?q=3060%20gordon%20coquitlam%20bc">3060 Gordon Avenue, Coquitlam, B.C. V3C 4S7</a>
+                </p>
+                <p>
+                    <i class="fa fa-phone"> (604) 464-3520</i>
+                </p>
             </div>
         </div>
 
@@ -34,6 +41,7 @@
             <p class="copyright">Copyright &#169; 2019 Westwood Self Serve Car Wash</p>
             <a href="#home"><img src="home.png" alt="flecha"></a>
         </footer>
+    </div>
 
 </body>
 
