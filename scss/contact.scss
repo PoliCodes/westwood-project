@@ -1,0 +1,53 @@
+html, body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: black;
+
+}
+.container{
+    display:block;
+    
+}
+h1{
+    text-align: center;
+    color:white;
+}
+.leftandright{
+    display:flex;
+}
+#left{
+    // width:50%;
+    & #form{
+        padding:10px;
+        margin: 0 auto;
+        & input{
+            height: 30px;
+            width:250px;
+        }
+    }
+}
+
+#right{
+    // width:50%;
+    float: right;
+margin-top:0;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom:50px;
+    color:white;
+}
+
+footer img {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 2%;
+}
+
+
+
