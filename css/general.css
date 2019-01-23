@@ -16,4 +16,52 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 38px;
+  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*menu dropdown*/
+nav {
+  background-color: #000;
+}
+nav .toggle + a,
+nav .menu {
+  display: none;
+}
+nav .toggle {
+  display: block;
+  padding: 20px 0;
+}
+nav [id^=drop]:checked + ul {
+  display: block;
+}
+nav input[type=checkbox] {
+  display: none;
+}
+nav ul li {
+  display: block;
+  width: 100%;
+}
+nav ul li > a {
+  display: block;
+  color: #ddd;
+  padding: 10px 0;
+  font-size: 32px;
+}
+nav ul li > a:hover {
+  color: #C30D00;
+}
+
+/*menu dropdown end*/
+
 /*# sourceMappingURL=general.css.map */

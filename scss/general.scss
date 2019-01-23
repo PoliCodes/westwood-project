@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$red1:#C30D00;
 html,
 body {
     margin: 0;
@@ -14,4 +15,53 @@ body {
     position: relative;
     padding: 50px 32px;
     box-sizing: border-box;
-} 
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 130%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/*menu dropdown*/
+
+nav {
+    background-color: #000;
+    & .toggle+a,
+    .menu {
+        display: none;
+    }
+    & .toggle {
+        display: block;
+        padding: 20px 0;
+    }
+    & [id^=drop]:checked+ul {
+        display: block;
+    }
+    & input[type="checkbox"] {
+        display: none;
+    }
+    & ul li {
+        display: block;
+        width: 100%;
+        &>a {
+            display: block;
+            color: #ddd;
+            padding: 10px 0;
+            font-size: 32px;
+            &:hover {
+                color: $red1;
+            }
+        }
+    }
+}
+
+/*menu dropdown end*/
