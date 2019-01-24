@@ -30,7 +30,7 @@ ul {
   margin: 0;
 }
 
-/*menu dropdown*/
+/*mobile - menu dropdown*/
 nav {
   background-color: #000;
 }
@@ -62,6 +62,39 @@ nav ul li > a:hover {
   color: #C30D00;
 }
 
-/*menu dropdown end*/
+/*mobile - menu dropdown end*/
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1050px) {
+  /* menu - desktop version*/
+  .top {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .top > .container .toggle,
+.top > .container [id^=drop] {
+    display: none;
+  }
+  .top > .container > a.logo {
+    display: block;
+    float: left;
+    padding: 16px 32px;
+  }
+  .top > .container > a.logo > img {
+    display: block;
+  }
+  .top > .container > ul.menu {
+    clear: none;
+    float: right;
+    display: block;
+  }
+  .top > .container > ul.menu > li {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+  }
+}
 
 /*# sourceMappingURL=general.css.map */

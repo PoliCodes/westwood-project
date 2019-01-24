@@ -31,7 +31,7 @@ ul {
     margin: 0;
 }
 
-/*menu dropdown*/
+/*mobile - menu dropdown*/
 
 nav {
     background-color: #000;
@@ -64,4 +64,44 @@ nav {
     }
 }
 
-/*menu dropdown end*/
+/*mobile - menu dropdown end*/
+
+/*MEDIA QUERIES*/
+
+@media screen and(min-width: 1050px) {
+    /* menu - desktop version*/
+    .top {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        // height: 80px;
+        &>.container {
+            .toggle,
+            [id^=drop] {
+                display: none;
+            }
+            &>a.logo {
+                display: block;
+                float: left;
+                padding: 16px 32px;
+                &>img {
+                    display: block;
+                    // height: 52px;
+                }
+            }
+            &>ul.menu {
+                clear: none;
+                float: right;
+                display: block;
+                // height: 80px;
+                &>li {
+                    display: inline-block;
+                    width: auto;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
