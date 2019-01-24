@@ -1,53 +1,52 @@
-html, body{
-    margin:0;
-    padding:0;
-    overflow:hidden;
+html,
+body {
+    // margin: 0;
+    // padding: 0;
+    // overflow: hidden;
     background-color: black;
+}
 
+.container {
+    // margin: 0 auto;
 }
-.container{
-    display:block;
-    
-}
-h1{
+
+h1 {
     text-align: center;
-    color:white;
-}
-.leftandright{
-    display:flex;
-}
-#left{
-    // width:50%;
-    & #form{
-        padding:10px;
-        margin: 0 auto;
-        & input{
-            height: 30px;
-            width:250px;
-        }
-    }
+    color: white;
 }
 
-#right{
-    // width:50%;
-    float: right;
-margin-top:0;
+.leftandright {
+    display: flex;
 }
 
-p {
-    text-align: center;
-    font-size: 14px;
-    position: fixed;
-    bottom:50px;
-    color:white;
+#left {
+    width: 50%;
+    padding: 20px;
 }
 
-footer img {
-    position: fixed;
-    bottom: 30px;
-    right: 50px;
-    width: 2%;
+#input {
+    height: 30px;
+    width: 100%;
 }
 
+#submit {
+    width: 10%;
+}
 
+#right {
+    width: 50%;
+    display: block;
+    padding: 10px;
+}
 
+#right p {
+    text-align: left;
+    font-size: 16px;
+    text-decoration: sans-serif;
+    color: white;
+}
+
+#right a {
+    color: white;
+    text-decoration: none;
+}

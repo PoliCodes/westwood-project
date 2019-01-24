@@ -8,93 +8,162 @@ body {
 }
 
 .container {
-  width: 1440px;
+  width: 960px;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
-  padding: 50px 32px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 h1 {
+  display: block;
   font-size: 38px;
   line-height: 130%;
+  text-align: center;
+  padding: 20px !important;
 }
 
 a {
   text-decoration: none;
 }
 
-ul {
+h1,
+h2,
+ul,
+li {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
-/*mobile - menu dropdown*/
-nav {
-  background-color: #000;
+@keyframes drop-down {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
-nav .toggle + a,
-nav .menu {
+.navtop {
+  background-color: #222;
+  height: 80px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.navtop input[type=checkbox] {
   display: none;
 }
-nav .toggle {
+.navtop .logo {
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #222;
+}
+.navtop .logo > a {
+  height: 60px;
+  clear: both;
+  z-index: 20;
+  box-sizing: border-box;
+}
+.navtop .logo > a > img {
+  height: 60px;
+}
+.navtop .toggle {
   display: block;
   padding: 20px 0;
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  z-index: 20;
+  cursor: pointer;
 }
-nav [id^=drop]:checked + ul {
-  display: block;
-}
-nav input[type=checkbox] {
+.navtop .menu {
   display: none;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+  animation: drop-down 200ms ease-out 1 forwards;
+  z-index: 10;
 }
-nav ul li {
+.navtop .menu > li {
   display: block;
   width: 100%;
 }
-nav ul li > a {
+.navtop .menu > li > a {
   display: block;
   color: #ddd;
   padding: 10px 0;
-  font-size: 32px;
+  font-size: 16px;
+  padding: 20px 30px;
 }
-nav ul li > a:hover {
-  color: #C30D00;
+.navtop .menu > li > a:hover {
+  background-color: #c30d00;
+  color: #fff;
+}
+.navtop #drop:checked + .menu {
+  display: block;
 }
 
-/*mobile - menu dropdown end*/
-/*MEDIA QUERIES*/
-@media screen and (min-width: 1050px) {
-  /* menu - desktop version*/
-  .top {
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-  .top > .container .toggle,
-.top > .container [id^=drop] {
+@media screen and (min-width: 960px) {
+  .navtop .toggle {
     display: none;
   }
-  .top > .container > a.logo {
+  .navtop > .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .navtop .logo {
+    width: auto;
+  }
+  .navtop .menu {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .navtop .menu > li {
     display: block;
     float: left;
-    padding: 16px 32px;
-  }
-  .top > .container > a.logo > img {
-    display: block;
-  }
-  .top > .container > ul.menu {
-    clear: none;
-    float: right;
-    display: block;
-  }
-  .top > .container > ul.menu > li {
-    display: inline-block;
     width: auto;
-    text-align: left;
   }
+  .navtop .menu > li > a {
+    line-height: 20px;
+    color: #fff;
+    box-sizing: border-box;
+  }
+}
+.footer {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer .cp {
+  line-height: 130%;
+  padding: 30px;
+  margin: 0 auto;
+  color: #FFF;
+  text-align: center;
+  opacity: 0.7;
+}
+.footer .ecp-logo {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: block;
+  float: right;
+  height: 80px;
+  width: 80px;
+}
+.footer .ecp-logo > img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=general.css.map */

@@ -1,107 +1,182 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-$red1:#C30D00;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+$red1: #c30d00;
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     width: 100vw;
+    // background-color: #fff;
 }
 
 .container {
-    width: 1440px;
+    // width: 1440px;
+    width: 960px;
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    padding: 50px 32px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 h1 {
+    display: block;
     font-size: 38px;
     line-height: 130%;
+    text-align: center;
+    padding: 20px !important;
 }
 
 a {
     text-decoration: none;
 }
 
-ul {
+h1,
+h2,
+ul,
+li {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
-/*mobile - menu dropdown*/
+// keyframes -------------
+@keyframes drop-down {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
 
-nav {
-    background-color: #000;
-    & .toggle+a,
-    .menu {
+// menu -------------
+.navtop {
+    background-color: #222;
+    // top: 0;
+    // position: fixed;
+    // z-index: 1;
+    height: 80px;
+    box-sizing: border-box;
+    width: 100%;
+    & input[type="checkbox"] {
         display: none;
+    }
+    & .logo {
+        height: 80px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #222;
+        &>a {
+            height: 60px;
+            clear: both;
+            z-index: 20;
+            box-sizing: border-box;
+            &>img {
+                height: 60px;
+            }
+        }
     }
     & .toggle {
         display: block;
         padding: 20px 0;
+        position: fixed;
+        top: 10px;
+        right: 30px;
+        z-index: 20;
+        cursor: pointer;
     }
-    & [id^=drop]:checked+ul {
-        display: block;
-    }
-    & input[type="checkbox"] {
+    & .menu {
         display: none;
-    }
-    & ul li {
-        display: block;
-        width: 100%;
-        &>a {
+        background-color: #222;
+        margin: 0;
+        padding: 0;
+        animation: drop-down 200ms ease-out 1 forwards;
+        z-index: 10;
+        &>li {
             display: block;
-            color: #ddd;
-            padding: 10px 0;
-            font-size: 32px;
-            &:hover {
-                color: $red1;
+            width: 100%;
+            &>a {
+                display: block;
+                color: #ddd;
+                padding: 10px 0;
+                font-size: 16px;
+                padding: 20px 30px;
+                &:hover {
+                    background-color: $red1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    & #drop:checked+.menu {
+        display: block;
+    }
+}
+
+@media screen and(min-width: 960px) {
+    .navtop {
+        & .toggle {
+            display: none;
+        }
+        &>.container {
+            display: flex;
+            flex-direction: row;
+        }
+        & .logo {
+            width: auto;
+        }
+        & .menu {
+            margin-left: auto;
+            display: block;
+            position: relative;
+            flex-direction: row;
+            padding: 10px;
+            &>li {
+                display: block;
+                float: left;
+                width: auto;
+                &>a {
+                    line-height: 20px;
+                    color: #fff;
+                    box-sizing: border-box;
+                }
             }
         }
     }
 }
 
-/*mobile - menu dropdown end*/
-
-/*MEDIA QUERIES*/
-
-@media screen and(min-width: 1050px) {
-    /* menu - desktop version*/
-    .top {
+// bottom ---------
+.footer {
+    background-color: #222;
+    // box-sizing: border-box;
+    height: 100px;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    & .cp {
+        line-height: 130%;
+        padding: 30px;
+        margin: 0 auto;
+        color: #FFF;
+        text-align: center;
+        opacity: 0.7;
+    }
+    & .ecp-logo {
+        position: absolute;
+        right: 20px;
+        top: 10px;
         display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        // height: 80px;
-        &>.container {
-            .toggle,
-            [id^=drop] {
-                display: none;
-            }
-            &>a.logo {
-                display: block;
-                float: left;
-                padding: 16px 32px;
-                &>img {
-                    display: block;
-                    // height: 52px;
-                }
-            }
-            &>ul.menu {
-                clear: none;
-                float: right;
-                display: block;
-                // height: 80px;
-                &>li {
-                    display: inline-block;
-                    width: auto;
-                    text-align: left;
-                }
-            }
+        float: right;
+        height: 80px;
+        width: 80px;
+        &>img {
+            // height: 80px;
+            display: block;
+            width: 100%;
         }
     }
 }
