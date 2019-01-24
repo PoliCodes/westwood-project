@@ -52,9 +52,6 @@ header .p {
     width: 45%;
 }
 
-
-
-
 /* footer */
 
 
@@ -78,6 +75,7 @@ header .p {
     .work img {
           margin: 2%;
           width: 90%;
+    border-radius: 3px;
     }
 
     .header2 {
