@@ -1,3 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    background: #0E0E0E;
+}
+
+h1 {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 0;
+    padding-top: 20px;
+    
+}
+
+/* header */
+
+header {
+    margin: 40px 0 50px 40px;
+}
+
+header .p {
+    width: 40%;
+    margin-top: 10px;
+    text-align: justify;
+
+
+}
+
+/* .work */
+
+.work {
+    text-align: center;
+    width: 100%;
+}
+
+.work img {
+    margin: 1%;
+    width: 45%;
+}
+
+
+
+
+/* footer */
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 991px) {
+    header {
+          text-align: left;
+          margin: 100px 0 100px 30px;
+    }
+
+    header .h1 {
+          font-size: 36px;
+    }
+
+    header .p {
+          font-size: 12px;
+          width: 90%;
+    }
+
+    .work img {
+          margin: 2%;
+          width: 90%;
+    }
+
+    .header2 {
+          margin: 130px 0 40px 12px;
+    }
+
+    .header2 h1 {
+          font-size: 36px;
+    }
+
+    .header2 p {
+          font-size: 12px;
+          width: 90%;
+    }
+
+    .work2 img {
+          margin: 2%;
+    }
+}
 
 
 /*# sourceMappingURL=products.css.map */
