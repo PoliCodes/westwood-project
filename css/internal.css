@@ -4,7 +4,7 @@
 
 p {
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   line-height: 130%;
 }
@@ -32,8 +32,8 @@ p {
 @media screen and (max-width: 960px) {
   .column {
     width: 100%;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
-/*# sourceMappingURL=services.css.map */
+/*# sourceMappingURL=internal.css.map */

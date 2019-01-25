@@ -1,7 +1,7 @@
 .content {
     display: grid;
     grid-template-columns: 2fr auto;
-    grid-gap: 20px;
+    grid-gap: 30px;
     padding: 20px;
     box-sizing: border-box;
     & .left {
@@ -25,9 +25,8 @@
             }
             & button {
                 padding: 12px 30px;
-                font-size: 20px;
-                border: none;
-                font-weight: bold;
+                font-size: 18px;
+                border: none; // font-weight: bold;
                 background-color: #222;
                 color: rgba($color: #fff, $alpha: 1.0);
                 &:hover {
@@ -35,11 +34,14 @@
                     background-color: #c30d00;
                 }
             }
-        } 
+        }
     }
     & .right {
         &>p {
-            font-size: 18px;
+            &:first-child {
+                margin-top: 0;
+            }
+            font-size: 20px;
             line-height: 130%;
             &>a {
                 color: #222;
@@ -65,37 +67,42 @@
                 }
             }
         }
+        & .right {
+            &>p {
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }
-
-/**/
-
-// .leftandright {
-//     display: flex;
-// }
-// #left {
-//     width: 50%;
-//     padding: 20px;
-// }
-// #input {
-//     height: 30px;
-//     width: 100%;
-// }
-// #submit {
-//     width: 10%;
-// }
-// #right {
-//     width: 50%;
-//     display: block;
-//     padding: 10px;
-// }
-// #right p {
-//     text-align: left;
-//     font-size: 16px;
-//     text-decoration: sans-serif;
-//     // color: white;
-// }
-// #right a {
-//     // color: white;
-//     text-decoration: none;
-// }
+        /**/
+        // .leftandright {
+        //     display: flex;
+        // }
+        // #left {
+        //     width: 50%;
+        //     padding: 20px;
+        // }
+        // #input {
+        //     height: 30px;
+        //     width: 100%;
+        // }
+        // #submit {
+        //     width: 10%;
+        // }
+        // #right {
+        //     width: 50%;
+        //     display: block;
+        //     padding: 10px;
+        // }
+        // #right p {
+        //     text-align: left;
+        //     font-size: 16px;
+        //     text-decoration: sans-serif;
+        //     // color: white;
+        // }
+        // #right a {
+        //     // color: white;
+        //     text-decoration: none;
+        // }
