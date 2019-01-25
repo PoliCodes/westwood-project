@@ -1,0 +1,17 @@
+ .caranim {
+  position: relative;
+  animation-name: anim1;
+  animation-duration: 2s;  
+  animation-fill-mode: forwards;
+  z-index: 0;
+
+}
+@keyframes anim1 {
+ 0%   {opacity: 0.0; left:-400px;}
+ 60%   {opacity: 0.6; left:-150px;}
+ 100%   {opacity: 1.0; left:-200px;}
+ 
+}
+b{
+ 
+}
