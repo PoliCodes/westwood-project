@@ -151,7 +151,7 @@ li {
 .footer {
     background-color: #222;
     // box-sizing: border-box;
-    height: 100px;
+    // min-height: 120px;
     padding: 20px;
     position: fixed;
     bottom: 0;
@@ -168,7 +168,7 @@ li {
     & .ecp-logo {
         position: absolute;
         right: 20px;
-        top: 10px;
+        top: 0px;
         display: block;
         float: right;
         height: 80px;
