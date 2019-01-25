@@ -9,22 +9,44 @@
     }
 }
 
-.home {
-    margin-top: 80px;
-    clear: both; // min-height: 700px; // height: calc(100vh - 100px);
-    width: 100%;
-    background: url("/imgs/homecar.png");
-    background-size: auto 300px;
-    background-repeat: no-repeat;
+// Car animation
+.caranim {
     position: relative;
+    animation-name: anim1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 0.0;
+        left: -400px;
+    }
+    60% {
+        opacity: 0.6;
+        left: -150px;
+    }
+    100% {
+        opacity: 1.0;
+        left: -200px;
+    }
+}
+
+//end car animation
+.home {
+    clear: both;
+    width: 100%;
+    background: url("../imgs/homecar.png");
+    background-size: auto 500px;
+    background-repeat: no-repeat;
     background-position: center top;
+    position: relative;
     background-color: #FFF;
     &>.container {
-        // height: calc(100vh - 100px);
-        // height: 100%;
         padding: 0;
         box-sizing: border-box;
-        position: relative;
+        position: relative; 
     }
     &-banner {
         position: relative;
@@ -40,9 +62,10 @@
         &>h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
-            color: #000;
-            font-weight: normal;
+            font-size: 42px !important;
+            color: #c30d00; 
+            // color: #000000; 
+            font-weight: bold;
             line-height: 150%;
             animation: fade-in 600ms 300ms ease-out both;
         }
@@ -67,7 +90,7 @@
 
 @media screen and(min-width: 960px) {
     .home {
-        background-size: auto 600px;
+        background-size: auto auto;
         &-banner {
             padding-top: 500px;
             &>h1 {

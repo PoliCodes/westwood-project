@@ -1,99 +1,38 @@
 * {
-    // margin: 0;
-    // padding: 0;
-    // border: none;
-    // outline: none;
-    // font-size: 100%;
-}
-
-body {
-    // width: 100%;
-    // background: #0E0E0E;
-}
-
-h1 {
-    // color: #fff;
-    // font-size: 38px;
-    // text-align: center;
+    box-sizing: border-box;
 }
 
 p {
-    font-size: 16px;
-	line-height: 150%;
-	// font-weight: bold;
-	padding: 20px 0;
-	margin: 0;
-}
-
-/* header */
-
-header {
-    // margin: 40px 0 50px 40px;
-}
-
-header .p {
-    // width: 40%;
-    // margin-top: 10px;
-    // text-align: justify;
-}
-
-/* .work */
-
-.work {
+    color: black;
+    font-size: 18px;
     text-align: center;
-	// width: 100%;
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-gap: 10px;
-	box-sizing: border-box;
-	overflow: hidden;
-	& > .box{
-		max-width: 400px;
-		& img{
-			width: 100%;
-		}
-	}
+    line-height: 130%;
+    // font-weight: bold;
 }
 
-// .work img {
-//     margin: 1%;
-//     width: 45%;
-// }
-
-/* footer */
-
-/* Responsiveness */
-
-@media only screen and (max-width: 991px) {
-    header {
-        text-align: left;
-        margin: 100px 0 100px 30px;
-    }
-    header .h1 {
-        font-size: 36px;
-    }
-    header .p {
-        font-size: 12px;
-        width: 90%;
-    }
-    .work img {
-        margin: 2%;
-        width: 90%;
-        border-radius: 3px;
-    }
-    .header2 {
-        margin: 130px 0 40px 12px;
-    }
-    .header2 h1 {
-        font-size: 36px;
-    }
-    .header2 p {
-        font-size: 12px;
-        width: 90%;
-    }
-    .work2 img {
-        margin: 2%;
+.column {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    & > img{
+        display: block;
+        width: 100%;
     }
 }
 
-/*# sourceMappingURL=products.css.map */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 960px) {
+    .column {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

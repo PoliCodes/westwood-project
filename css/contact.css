@@ -1,47 +1,63 @@
-html,
-body {
-  background-color: black;
-}
-
-h1 {
-  text-align: center;
-  color: white;
-}
-
-.leftandright {
-  display: flex;
-}
-
-#left {
-  width: 50%;
+.content {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  grid-gap: 20px;
   padding: 20px;
+  box-sizing: border-box;
 }
-
-#input {
-  height: 30px;
-  width: 100%;
-}
-
-#submit {
-  width: 10%;
-}
-
-#right {
-  width: 50%;
+.content .left {
   display: block;
-  padding: 10px;
 }
-
-#right p {
-  text-align: left;
-  font-size: 16px;
-  text-decoration: sans-serif;
+.content .left form {
+  /* & input[type='text'] {}*/
+}
+.content .left form textarea, .content .left form input {
+  box-sizing: border-box;
+  display: block;
+  padding: 12px;
+  width: 100%;
+  color: #222;
+  font-size: 18px;
+  font-family: "Open sans", sans-serif;
+  margin-bottom: 20px;
+  outline: none;
+}
+.content .left form textarea {
+  resize: none;
+}
+.content .left form button {
+  padding: 12px 30px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+  background-color: #222;
   color: white;
 }
-
-#right a {
-  color: white;
-  text-decoration: none;
+.content .left form button:hover {
+  cursor: pointer;
+  background-color: #c30d00;
 }
+.content .right > p {
+  font-size: 18px;
+  line-height: 130%;
+}
+.content .right > p > a {
+  color: #222;
+}
+.content .right > p:hover i.fa-map-marker, .content .right > p:hover a {
+  color: #c30d00;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    grid-template-columns: auto;
+  }
+  .content .left form textarea, .content .left form input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/**/
 
 /*# sourceMappingURL=contact.css.map */

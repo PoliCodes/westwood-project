@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Westwood / Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,38 +22,66 @@
             <label for="drop" class="toggle"><img src="./imgs/menu_ico.png" alt="menu dropdown"></label>
             <input type="checkbox" id="drop" />
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contacts</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <h1>CONTACT US</h1>
-        <div class=leftandright>
-            <div id="left">
-                <form id="form">
-                    <input id="input" type="text" placeholder="Name" /><br><br>
-                    <input id="input" type="text" placeholder="Email" /><br><br>
-                    <textarea rows="10" cols="66" placeholder="Message"></textarea><br><br>
-                    <input type="Submit" value="Submit" id="submit" />
-                </form>
+    <section class="contact">
+        <div class="container">
+            <h1>CONTACT US</h1>
+            <div class="content">
+                <div class="left">
+                    <form>
+                        <input type="text" placeholder="Name" />
+                        <input type="text" placeholder="Email" />
+                        <textarea rows="8" cols="" placeholder="Message"></textarea>
+                        <!-- <input type="Submit" value="Submit" id="submit" /> -->
+                        <button>Send</button>
+                    </form>
+                </div>
+                
+                <div class="right">
+                    <p>Our store and phone number:</p>
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="http://maps.google.com/?q=3060%20gordon%20coquitlam%20bc">3060 Gordon Avenue,
+                            Coquitlam,
+                            B.C. V3C 4S7
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone"></i> (604) 464-3520
+                    </p>
+                </div>
             </div>
+            <!-- <div class=leftandright>
+                <div id="left">
+                    <form id="form">
+                        <input id="input" type="text" placeholder="Name" /><br><br>
+                        <input id="input" type="text" placeholder="Email" /><br><br>
+                        <textarea rows="10" cols="" placeholder="Message"></textarea><br><br>
+                        <input type="Submit" value="Submit" id="submit" />
+                    </form>
+                </div>
 
-            <div id="right">
-                <p>Our store and phone number is:</p>
-                <p>
-                    <i class="fa fa-map-marker"></i>
-                    <a href="http://maps.google.com/?q=3060%20gordon%20coquitlam%20bc">3060 Gordon Avenue, Coquitlam,
-                        B.C. V3C 4S7</a>
-                </p>
-                <p>
-                    <i class="fa fa-phone"> (604) 464-3520</i>
-                </p>
-            </div>
+                <div id="right">
+                    <p>Our store and phone number is:</p>
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="http://maps.google.com/?q=3060%20gordon%20coquitlam%20bc">3060 Gordon Avenue,
+                            Coquitlam,
+                            B.C. V3C 4S7</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone"> (604) 464-3520</i>
+                    </p>
+                </div>
+            </div> -->
         </div>
-    </div>
+    </section>
     <!-- Bottom -->
     <footer class="footer">
         <div class="container">

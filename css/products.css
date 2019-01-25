@@ -1,67 +1,39 @@
-p {
-  font-size: 16px;
-  line-height: 150%;
-  padding: 20px 0;
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-/* header */
-/* .work */
-.work {
+p {
+  color: black;
+  font-size: 18px;
   text-align: center;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  line-height: 130%;
+}
+
+.column {
   box-sizing: border-box;
   overflow: hidden;
+  display: block;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.work > .box {
-  max-width: 400px;
-}
-.work > .box img {
+.column > img {
+  display: block;
   width: 100%;
 }
 
-/* footer */
-/* Responsiveness */
-@media only screen and (max-width: 991px) {
-  header {
-    text-align: left;
-    margin: 100px 0 100px 30px;
-  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  header .h1 {
-    font-size: 36px;
-  }
-
-  header .p {
-    font-size: 12px;
-    width: 90%;
-  }
-
-  .work img {
-    margin: 2%;
-    width: 90%;
-    border-radius: 3px;
-  }
-
-  .header2 {
-    margin: 130px 0 40px 12px;
-  }
-
-  .header2 h1 {
-    font-size: 36px;
-  }
-
-  .header2 p {
-    font-size: 12px;
-    width: 90%;
-  }
-
-  .work2 img {
-    margin: 2%;
+@media screen and (max-width: 960px) {
+  .column {
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
-/*# sourceMappingURL=products.css.map */
 
 /*# sourceMappingURL=products.css.map */
